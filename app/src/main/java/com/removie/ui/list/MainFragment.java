@@ -81,7 +81,6 @@ public class MainFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         ButterKnife.bind(this, view);
 
-        //slideup = AnimationUtils.loadAnimation(getContext(), R.anim.slide_up_animation);
         bttone = AnimationUtils.loadAnimation(getContext(), R.anim.bttone);
         bttwo = AnimationUtils.loadAnimation(getContext(), R.anim.bttwo);
         btthree = AnimationUtils.loadAnimation(getContext(), R.anim.btthree);

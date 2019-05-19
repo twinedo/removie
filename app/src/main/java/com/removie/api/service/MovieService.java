@@ -57,10 +57,6 @@ public interface MovieService {
     @GET("movie/{id}/videos")
     Call<TrailersResponse> trailerMovie(@Path("id") long id, @Query("api_key") String apiKey);
 
-    //Credits
-    @GET("movie/{id}/reviews")
-    Call<CreditsResponse> reviewsMovie(@Path("id") long id, @Query("api_key") String apiKey);
-
     //credits
     @GET("movie/{id}/credits")
     Call<CreditsResponse> creditsMovie(@Path("id") long id, @Query("api_key") String apiKey);

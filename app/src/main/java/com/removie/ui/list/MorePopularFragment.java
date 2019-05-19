@@ -45,7 +45,6 @@ public class MorePopularFragment extends Fragment {
     @BindView(R.id.recyclerview4) RecyclerView recyclerView4;
     @BindView(R.id.recyclerview5) RecyclerView recyclerView5;
     @BindView(R.id.xtoolbar) Toolbar xtoolbar;
-    //@BindView(R.id.back) ImageView back;
 
 
     private MoviesAdapter adapter1, adapter2, adapter3, adapter4, adapter5;
