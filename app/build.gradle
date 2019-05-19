@@ -1,0 +1,83 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.removie"
+        minSdkVersion 26
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        targetCompatibility = "8"
+        sourceCompatibility = "8"
+    }
+
+    buildscript {
+        repositories {
+            mavenCentral()
+            google()
+            maven {
+                name 'Sonatype SNAPSHOTs'
+                url 'https://oss.sonatype.org/content/repositories/snapshots/'
+            }
+            jcenter()
+        }
+        dependencies {
+            classpath 'com.jakewharton:butterknife-gradle-plugin:9.0.0-SNAPSHOT'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0-alpha3'
+    androidTestImplementation 'androidx.test:runner:1.2.0-beta01'
+
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+
+    //Retrofit
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'com.squareup.okhttp3:okhttp:3.14.1'
+    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
+
+    //Butterknife
+    implementation 'com.jakewharton:butterknife:9.0.0-SNAPSHOT'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:9.0.0-SNAPSHOT'
+
+    //PICASSO
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    testImplementation 'junit:junit:4.13-beta-2'
+    implementation 'javax.inject:javax.inject:1'
+
+    implementation 'com.github.takusemba:multisnaprecyclerview:1.3.3'
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+
+    implementation 'com.sromku:simple-fb:4.1.1'
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+        maven {
+            name 'Sonatype SNAPSHOTs'
+            url 'https://oss.sonatype.org/content/repositories/snapshots/'
+        }
+    }
+}
